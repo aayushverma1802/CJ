@@ -6,8 +6,7 @@ const int N = 1e7;
 vector<int> adj[N];
 bool vis[N];
 void dfs(int node)
-{
-    
+{ 
     cout << node << endl;
     for (auto it : adj[node])
     {
