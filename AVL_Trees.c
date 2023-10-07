@@ -7,7 +7,7 @@ struct Node{
     int height;
 };
 
-
+ 
 void preOrder(struct Node *root)
 {
     if (root != NULL)
