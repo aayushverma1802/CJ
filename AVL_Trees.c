@@ -5,7 +5,7 @@ struct Node{
     struct Node *left;
     struct Node *right;
     int height; 
-};
+}; 
  
  
 void preOrder(struct Node *root)
