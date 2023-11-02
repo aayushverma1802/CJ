@@ -6,7 +6,7 @@ struct Node{
     struct Node *right;
     int height; 
 }; 
- 
+  
  
 void preOrder(struct Node *root)
 {
