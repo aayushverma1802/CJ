@@ -1,0 +1,35 @@
+class Solution {
+public:
+bool solve(string &s,string &p,int i,int j){
+    if(i==0 and j==0){
+        return true;
+    }
+
+    if(i>0 and j==0){
+        return false;
+    }
+    if( i==0 and j>0){
+        for(int k=1;k<=j;k++){
+            if(p[k-1]=='*'){
+                return true;
+            }
+        }
+        return false;
+    }
+    if(s[i-1]==p[j-1] or p[j-1]=='?'){
+        return solve(s,p,i-1,j-1);
+    }
+    else if(p[j-1]=='*'){
+        return solve(s,p,i-1,j) or solve(s,p,i-1,j-1) ;
+    }
+    else{
+        return false;
+    }
+
+}
+    bool isMatch(string s, string p) {
+        int n=s.size();
+        int m=p.size();
+        return solve(s,p,n,m);
+    }
+};
